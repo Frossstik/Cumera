@@ -22,6 +22,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.video.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.cumera.databinding.FragmentPhotoBinding
 import com.example.cumera.databinding.FragmentVideoBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.util.concurrent.ListenableFuture
@@ -32,7 +33,7 @@ import java.util.concurrent.Executors
 
 class VideoFragment : Fragment() {
     private var _binding: FragmentVideoBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = _binding ?: RuntimeException() as FragmentVideoBinding
 
     private lateinit var cameraProviderFuture: ListenableFuture<ProcessCameraProvider>
     private lateinit var cameraSelector: CameraSelector

@@ -11,11 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.cumera.GalleryAdapter
 import com.example.cumera.databinding.FragmentGalleryBinding
+import com.example.cumera.databinding.FragmentPhotoBinding
 import java.io.File
 
 class GalleryFragment : Fragment() {
     private var _binding: FragmentGalleryBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = _binding ?: RuntimeException() as FragmentGalleryBinding
 
     private var currentMediaFile: File? = null
 

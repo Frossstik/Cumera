@@ -37,7 +37,7 @@ import java.util.concurrent.Executors
 
 class PhotoFragment : Fragment() {
     private var _binding: FragmentPhotoBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = _binding ?: RuntimeException() as FragmentPhotoBinding
 
     private lateinit var cameraProviderFuture: ListenableFuture<ProcessCameraProvider>
     private lateinit var cameraSelector: CameraSelector
