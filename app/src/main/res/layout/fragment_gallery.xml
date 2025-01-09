@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RecyclerView для галереи -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Полноэкранный просмотр -->
+    <FrameLayout
+        android:id="@+id/fullscreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fullscreenImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
+
+        <VideoView
+            android:id="@+id/fullscreenVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#66000000"
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:background="@android:color/transparent"
+                app:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:background="@android:color/transparent"
+                app:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

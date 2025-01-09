@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top|start"/>
+
+    <!-- Кнопка воспроизведения для видео -->
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_play"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <!-- Новый TextView для отображения даты -->
+    <TextView
+        android:id="@+id/mediaDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="8dp"/>
+
+</FrameLayout>
