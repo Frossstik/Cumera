@@ -3,7 +3,6 @@ package com.example.cumera
 import android.graphics.Bitmap
 import android.media.ThumbnailUtils
 import android.provider.MediaStore
-import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cumera.databinding.ItemGalleryBinding
 import java.io.File
-import java.util.*
 
 class GalleryAdapter(
     private val files: Array<File>,
@@ -33,7 +31,6 @@ class GalleryAdapter(
     override fun onBindViewHolder(holder: GalleryViewHolder, position: Int) {
         val file = files[position]
 
-        // Установим дату создания
         val lastModified = file.lastModified()
         val date = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date(lastModified))
 

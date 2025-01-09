@@ -10,7 +10,6 @@
         android:scaleType="centerCrop"
         android:layout_gravity="top|start"/>
 
-    <!-- Кнопка воспроизведения для видео -->
     <ImageView
         android:id="@+id/playButton"
         android:layout_width="48dp"
@@ -20,7 +19,6 @@
         android:visibility="gone"
         android:layout_gravity="center"/>
 
-    <!-- Новый TextView для отображения даты -->
     <TextView
         android:id="@+id/mediaDate"
         android:layout_width="wrap_content"

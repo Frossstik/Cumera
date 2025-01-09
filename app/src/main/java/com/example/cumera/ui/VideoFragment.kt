@@ -1,8 +1,6 @@
 package com.example.cumera.ui
 
-import android.Manifest
 import android.content.ContentValues
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -13,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import android.widget.Chronometer
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.camera.core.CameraSelector
@@ -22,7 +19,6 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.video.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.cumera.databinding.FragmentPhotoBinding
 import com.example.cumera.databinding.FragmentVideoBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.util.concurrent.ListenableFuture
@@ -119,9 +115,8 @@ class VideoFragment : Fragment() {
     }
 
     private fun startRecording() {
-        // Показываем Chronometer, когда начинается запись
         binding.chronometer.visibility = View.VISIBLE
-        binding.chronometer.base = SystemClock.elapsedRealtime()  // Сброс времени до начала записи
+        binding.chronometer.base = SystemClock.elapsedRealtime()
         binding.chronometer.start()
 
         val fileName = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss", Locale.US).format(System.currentTimeMillis())
@@ -153,7 +148,6 @@ class VideoFragment : Fragment() {
                         val msg = "Video saved: $savedUri"
                         Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-                        // Прячем Chronometer после завершения записи
                         binding.chronometer.visibility = View.GONE
 
                         if (event.hasError()) {

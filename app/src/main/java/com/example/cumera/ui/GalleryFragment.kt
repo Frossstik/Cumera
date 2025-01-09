@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.cumera.GalleryAdapter
 import com.example.cumera.databinding.FragmentGalleryBinding
-import com.example.cumera.databinding.FragmentPhotoBinding
 import java.io.File
 
 class GalleryFragment : Fragment() {
@@ -31,7 +30,6 @@ class GalleryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Используем getExternalStoragePublicDirectory для получения директории Pictures и Movies
         val picturesDirectory = File(Environment.getExternalStorageDirectory(), "Pictures/Cumera")
         val picturesFiles = picturesDirectory.listFiles()?.reversedArray() ?: emptyArray()
 
@@ -91,11 +89,9 @@ class GalleryFragment : Fragment() {
     }
 
     private fun refreshGallery() {
-        // Чтение файлов из директории Pictures/Cumera
         val picturesDirectory = File(Environment.getExternalStorageDirectory(), "Pictures/Cumera")
         val picturesFiles = picturesDirectory.listFiles()?.reversedArray() ?: emptyArray()
 
-        // Чтение файлов из директории Movies/Cumera
         val moviesDirectory = File(Environment.getExternalStorageDirectory(), "Movies/Cumera")
         val movieFiles = moviesDirectory.listFiles()?.reversedArray() ?: emptyArray()
 

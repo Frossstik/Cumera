@@ -1,15 +1,10 @@
 package com.example.cumera.ui
 
-import android.Manifest
-import android.app.Activity
 import android.content.ContentValues
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
@@ -24,12 +19,10 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.example.cumera.databinding.FragmentPhotoBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.util.concurrent.ListenableFuture
-import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.ExecutorService

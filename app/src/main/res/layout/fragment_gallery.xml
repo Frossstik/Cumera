@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView для галереи -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -14,7 +13,6 @@
         android:padding="8dp"
         android:scrollbars="vertical" />
 
-    <!-- Полноэкранный просмотр -->
     <FrameLayout
         android:id="@+id/fullscreenContainer"
         android:layout_width="match_parent"
